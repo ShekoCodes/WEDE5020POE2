@@ -1,0 +1,460 @@
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+img 
+{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* CSS Custom Properties (Shades of Grey Palette) */
+* 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Page Enter Animation */
+@keyframes slideInFromRight 
+{
+    0% {
+        opacity: 0;
+        transform: translateX(60px);  
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);  
+    }
+}
+
+/* Apply animation to main content wrapper */
+main, .container 
+{
+    animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+body 
+{
+    font-family: 'Poppins', sans-serif;
+    
+    background-image: url('../images/Backsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #262626;
+    color: #66606069;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Navigation */
+header 
+{
+    background: linear-gradient(rgba(38, 38, 38, 0.308), rgba(83, 83, 83, 0.651)), 
+    url('../images/heroshot.jpg') center/cover no-repeat;
+    border-bottom: 1px solid #855f4d;
+    padding: 2.5rem 1rem 1.5rem;
+    text-align: center;
+}
+
+
+header img 
+{
+    border-radius: 70%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+   border: 2px solid #855f4d;
+}   
+
+header h1 
+{
+    font-family: 'Great Vibes', cursive;
+    font-size: 10rem;
+    color: #b48f7a;
+    margin-bottom: 0.25rem;
+    font-weight: 400;
+}
+
+header p em 
+{
+   color: #d8b09d;
+   font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+nav 
+{
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 3px dashed #ad8471;
+}
+
+header, .navbar 
+{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+nav a 
+{
+    color: #d3aa8e;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.2s ease-in-out;
+}
+
+nav a:hover 
+{
+    color: #a07156;
+    text-decoration: underline;
+}
+
+.logo,.brand-logo, header img 
+{
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 150px;           
+    max-width: 100%;
+    height: auto;
+}
+
+/* Main Content Layout */
+main 
+{
+    flex: 1;
+    max-width: 1000px;
+    width: 90%;
+    margin: 2.5rem auto;
+    padding: 3.5rem;
+    background-color: #413d3cd2;
+    border: 1px solid #855f4d;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(56, 55, 55, 0.4);
+}
+
+section 
+{
+    margin-bottom: 2rem;
+}
+
+h2 
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    color: #bb8d78;
+    border-bottom: 1px solid #855f4d;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+h3 
+{
+    font-size: 1.25rem;
+    color: #c99c87;
+    margin-bottom: 0.5rem;
+}
+
+p 
+{
+    margin-bottom: 1.2rem;
+    color: hsl(320, 2%, 72%);
+}
+
+a, p, .location-card p 
+{
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+hr 
+{
+    border: none;
+    height: 1px;
+    margin: 2rem 0;
+}
+
+
+/* List Styling */
+ul 
+{
+    list-style-position: inside;
+    margin: 1rem 0;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+li 
+{
+    margin-bottom: 0.5rem;
+    color: #c9916cd7;
+}
+
+/* Cards & Articles */
+article 
+{
+    background-color: #38363486;
+    border: 1px solid #855f4d ;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+/* Forms & Controls */
+form 
+{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form p 
+{
+    margin-bottom: 1rem;
+}
+
+label 
+{
+    display: block;
+    font-weight: 500;
+    color: #a17961d2;
+    margin-bottom: 0.3rem;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], select, textarea 
+{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #1d1c1c;
+    border-radius: 12px;
+    background-color: #302e2eb7;
+    color: #b9a297;
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus, textarea:focus 
+{
+    outline: none;
+    border-color: #a07853;
+    box-shadow: 0 0 0 3px rgba(190, 190, 190, 0.15);
+}
+
+button [type="submit"] 
+{
+    width: 100%;
+    padding: 0.85rem;
+    background-color: #464445;
+    color: #855f4d;
+    border: 1px solid #584f56;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover 
+{
+    background-color: #585355;
+    color: #070606d2;
+}
+
+/* Footer */
+footer 
+{
+    background-color: #1c1b1b9c;
+    border-top: 1px solid #855f4d;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color:#855f4d;
+    font-size: 0.9rem;
+    background-color: #1c1b1bbe;
+    border-top: 1px solid #855f4d;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+a.link 
+{
+    display: inline-block;
+    background-color: #444141;
+    color: #bebebe !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid #383737;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+a.link:hover 
+{
+    background-color: #272323bd !important;
+    color: #282828;
+}
+
+.founder-section 
+{
+    display: flex !important;
+    align-items: stretch !important;
+    gap: 40px;           
+}
+
+.founder-img 
+{
+    width: 45% !important;
+    max-width: 500px !important;
+    height: auto !important;        /* Forces explicit height */
+    min-height: 700px !important;    /* Prevents shrinking */
+    object-fit: cover !important;     /* Fits image without distortion */
+    object-position: top center !important;
+    
+}
+
+.founder-text 
+{
+    flex: 1;            
+}
+
+/* 1. Force the container/card to center all content inside it */
+.featured-card,.card, div[class*="card"] 
+{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;     
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+/* 2. Force the image to center itself as a block element */
+.featured-card img,.card img, div[class*="card"] img 
+{
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Make embedded maps fluid and contained */
+iframe 
+{
+    width: 100% !important;
+    max-width: 100% !important;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure map containers scale properly */
+.map-container,.location-card 
+{
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Tablet & Mobile Screens (768px wide and smaller) */
+@media screen and (max-width: 768px) 
+{ 
+    /* Stack navigation links vertically on small screens */
+    .nav-links 
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Stack the Founder image and text top-to-bottom */
+    .founder-section 
+    {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px;
+    }
+
+    /* Make the founder image fill the mobile screen width */
+    .founder-img 
+    {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important; /* Resizes naturally on mobile */
+        min-height: initial !important;
+    }
+
+    /* Make the founder text full width below the image */
+    .founder-text 
+    {
+        width: 100% !important;
+        text-align: left;
+    }
+
+    /* Adjust page container padding for smaller screens */
+    .container 
+    {
+        width: 90%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    /* Resets image heights and widths for small screens */
+    img,.founder-img, .product-card img 
+    {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important; 
+        min-height: 0 !important;
+    }
+
+    logo, 
+    .brand-logo, header img 
+    {
+        width: 110px !important;   
+        max-width: 120px !important;
+        height: auto !important;
+        margin: 0 auto !important;            
+        display: block;
+    }
+
+    iframe 
+    {
+        height: 250px !important; /* Prevents tall vertical scrolling on mobile */
+    }
+
+    .location-card p,.location-card a 
+    {
+        font-size: 0.85rem !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-all !important;
+    }
+
+    h1,.brand-title,.hero-title 
+    {
+        font-size: clamp(1.8rem, 6vw, 2.5rem) !important; /* Scales smoothly between screen sizes */
+        white-space: nowrap !important;                   /* Keeps "Afro Crown Beauty" on one single line */
+        text-align: center !important;
+        line-height: 1.2 !important;
+        padding: 0 10px;
+    }
+
+    header p, .hero-subtitle, header p em 
+    {
+        font-size: 0.9rem !important;
+        text-align: center !important;
+    }
+}
+
